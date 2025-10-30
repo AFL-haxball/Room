@@ -206,7 +206,6 @@ export default abstract class SnapEvents extends BasePlay<SnapStore> {
 
   onBallCarrierContactOffense(playerContact: PlayerContact) {
     if (!Room.players.hasEnoughPlayers(4)) {
-      client.sendChat("Impossible : yoi need 4v4");
       return;
     }
     
