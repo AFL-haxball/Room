@@ -103,6 +103,12 @@ export default class PlayerManager {
     );
   }
 
+  hasEnoughPlayers(min: number): boolean {
+    const redCount = this.getRed().length;
+    const blueCount = this.getBlue().length;
+    return redCount >= min && blueCount >= min;
+  }
+
   private _createPlayer(player: FullPlayerObject): Player {
     return new Player(player);
   }
